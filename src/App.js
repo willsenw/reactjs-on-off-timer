@@ -2,6 +2,10 @@ import React , {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// Context
+const MyContext = React.createContext();
+
+// Component
 class Timer extends Component{
   constructor( props ){
     super(props);
@@ -45,17 +49,33 @@ class Timer extends Component{
   }
 }
 
+// HOC - Higher Order Component
+const withBackground = (WrappedComponent) => {
+  class WithBackground extends Component{
+    render(){
+      return (
+        <MyContext.Provider value = {{startTime:"0"}}>
+            <div className="App">
+              <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <WrappedComponent/>
+              </header>
+            </div>
+        </MyContext.Provider>
+      );
+    }
+  }
+  return WithBackground;
+};
+
 class App extends Component {
   render(){
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Timer startTime = "0"/>
-        </header>
-      </div>
+      <MyContext.Consumer>
+        { context => (<Timer startTime = {context.startTime}/>) }
+      </MyContext.Consumer>
     );
   }
 }
 
-export default App;
+export default withBackground(App);
