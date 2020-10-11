@@ -2,6 +2,7 @@
 [github pages](https://willsenw.github.io/reactjs-on-off-timer/)
 ![GitHub Logo](/preview.png)
 
+<br/>
 ### `npm start`
 
 Runs the app in the development mode.<br />
