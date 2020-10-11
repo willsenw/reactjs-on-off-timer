@@ -1,5 +1,5 @@
 ## Preview App
-[https://willsenw.github.io/reactjs-on-off-timer/]github-pages
+[https://willsenw.github.io/reactjs-on-off-timer/](github-pages)
 ![GitHub Logo](/preview.png)
 
 ### `npm start`
