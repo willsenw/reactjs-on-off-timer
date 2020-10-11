@@ -3,7 +3,6 @@
 <br/><br/>
 ![GitHub Logo](/preview.png)
 
-<br/>
 ### `npm start`
 
 Runs the app in the development mode.<br />
