@@ -1,5 +1,6 @@
 ## Preview App
 [github pages](https://willsenw.github.io/reactjs-on-off-timer/)
+<br/><br/>
 ![GitHub Logo](/preview.png)
 
 <br/>
